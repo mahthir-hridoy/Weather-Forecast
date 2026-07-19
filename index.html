@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherVista</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="sky">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+    </div>
+
+    <div class="container">
+        <div class="search-box">
+            <div class="search-wrapper">
+                <input type="text" id="cityInput" placeholder="Enter city">
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+
+            <button id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <div class="weather-card">
+            <img id="weatherIcon" src="" alt="Weather Icon">
+            <h1 id="temperature">--°C</h1>
+            <p id="feelsLike">Feels Like 0°C</p>
+            <h2 id="cityName">City Name</h2>
+            <p id="description"> Weather Description </p>
+        </div>
+
+        <div class="details">
+            <div class="detail-box">
+                <i class="fa-solid fa-wind"></i>
+                <h3 id="wind">0 km/h</h3>
+                <p>Wind</p>
+            </div>
+
+            <div class="detail-box">
+                <i class="fa-solid fa-droplet"></i>
+                <h3 id="humidity">0%</h3>
+                <p>Humidity</p>
+            </div>
+
+            <div class="detail-box">
+                <i class="fa-solid fa-eye"></i>
+                <h3 id="visibility">0 km</h3>
+                <p>Visibility</p>
+            </div>
+
+            <div class="detail-box">
+                <i class="fa-solid fa-gauge-high"></i>
+                <h3 id="pressure">0 hPa</h3>
+                <p>Pressure</p>
+            </div>
+
+            <div class="detail-box">
+                <i class="fa-solid fa-sun"></i>
+                <h3 id="sunrise">--:--</h3>
+                <p>Sunrise</p>
+            </div>
+
+            <div class="detail-box">
+                <i class="fa-solid fa-moon"></i>
+                <h3 id="sunset">--:--</h3>
+                <p>Sunset</p>
+            </div>
+        </div>
+    </div>
+    <div class="graph-container">
+        <h3>📈 Weather Analytics</h3>
+        <div class="graph-buttons">
+            <button class="graph-btn" id="tempBtn"> Temperature </button>
+            <button class="graph-btn" id="hourBtn"> Hourly </button>
+            <button class="graph-btn" id="rainBtn"> Rain Chance </button>
+        </div>
+        <div class="chart-wrapper">
+            <canvas id="weatherChart"></canvas>
+            <div id="graphTooltip" class="graph-tooltip"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
