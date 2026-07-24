@@ -4,8 +4,6 @@
 
 A modern, responsive weather application built using **HTML, CSS, JavaScript, Chart.js, and the OpenWeather API**.
 
-<img src="assets/screenshots/home.png" width="850">
-
 </div>
 
 ---
