@@ -34,24 +34,7 @@ A modern, responsive weather application built using **HTML, CSS, JavaScript, Ch
 - HTML5
 - CSS3
 - JavaScript (ES6)
-- Chart.js
 - OpenWeather API
-
----
-
-## 📸 Screenshots
-
-### Home
-
-<img src="assets/screenshots/home.png">
-
-### Temperature Graph
-
-<img src="assets/screenshots/temperature.png">
-
-### Rain Chance Graph
-
-<img src="assets/screenshots/rain.png">
 
 ---
 
@@ -140,7 +123,6 @@ https://api.openweathermap.org/data/2.5/forecast
 
 ## 🎯 Future Improvements
 
-- Hourly Forecast
 - 7-Day Forecast
 - Air Quality Index
 - UV Index
