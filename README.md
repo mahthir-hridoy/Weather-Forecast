@@ -1,5 +1,5 @@
 <div align="center">
-
+  
 # 🌦️ Weather Dashboard
 
 A modern, responsive weather application built using **HTML, CSS, JavaScript, Chart.js, and the OpenWeather API**.
