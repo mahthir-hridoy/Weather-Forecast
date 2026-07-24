@@ -132,14 +132,10 @@ https://api.openweathermap.org/data/2.5/forecast
 
 ## 👨‍💻 Author
 
-**Your Name**
+Mirza Mahthir Hossain Hridoy | ID: 24235195
 
 Software Engineering
 
 Daffodil International University (DIU)
 
 ---
-
-## 📄 License
-
-This project was developed for educational purposes.
