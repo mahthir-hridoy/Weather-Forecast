@@ -386,18 +386,17 @@ canvas{
     transition:transform .4s ease;
 }
 
-.needle-head{
+.needle-up{
     position:absolute;
-    left:-8px;
+    left:-4px;
     bottom:0;
-    width:0;
-    height:0;
-    border-left:8px solid transparent;
-    border-right:8px solid transparent;
-    border-bottom:55px solid #00d4ff;
+    width:8px;
+    height:60px;
+    background:#00d4ff;
+    clip-path:polygon(50% 0%,100% 100%,0% 100%);
 }
 
-.needle-tail{
+.needle-down{
     position:absolute;
     left:-2px;
     top:0;
@@ -405,6 +404,17 @@ canvas{
     height:45px;
     background:white;
     border-radius:10px;
+}
+
+.center-dot{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:14px;
+    height:14px;
+    transform:translate(-50%,-50%);
+    background:white;
+    border-radius:50%;
 }
 
 #windDirectionText{
