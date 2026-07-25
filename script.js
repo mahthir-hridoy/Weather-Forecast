@@ -12,13 +12,11 @@ const weatherIcon = document.getElementById("weatherIcon");
 const suggestionBox = document.getElementById("suggestions");
 
 const tempBtn = document.getElementById("tempBtn");
-const hourBtn = document.getElementById("hourBtn");
 const rainBtn = document.getElementById("rainBtn");
 
 tempBtn.addEventListener("click", () => {
     tempBtn.classList.add("active");
     rainBtn.classList.remove("active");
-    hourBtn.classList.remove("active");
     drawChart(
         chartLabels,
         chartTemperatures,
@@ -30,7 +28,6 @@ tempBtn.addEventListener("click", () => {
 rainBtn.addEventListener("click", () => {
     rainBtn.classList.add("active");
     tempBtn.classList.remove("active");
-    hourBtn.classList.remove("active");
     drawChart(
         chartLabels,
         chartRainChance,
