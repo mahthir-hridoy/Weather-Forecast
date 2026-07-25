@@ -60,7 +60,16 @@ document.addEventListener("click",(e)=>{
     }
 });
 
-
+function getWindDirection(deg){
+    if(deg >= 337.5 || deg < 22.5) return "North";
+    if(deg < 67.5) return "North-East";
+    if(deg < 112.5) return "East";
+    if(deg < 157.5) return "South-East";
+    if(deg < 202.5) return "South";
+    if(deg < 247.5) return "South-West";
+    if(deg < 292.5) return "West";
+    return "North-West";
+}
 
 async function getWeather(city){
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
@@ -94,8 +103,8 @@ async function getWeather(city){
 
     const windArrow = document.getElementById("windArrow");
     const windDirectionText = document.getElementById("windDirectionText");
-    windArrow.style.transform = `translateX(-50%) rotate(${data.wind.deg}deg)`;
-    windDirectionText.innerHTML = data.wind.deg + "°";
+    windArrow.style.transform = `translate(-50%,-50%) rotate(${data.wind.deg}deg)`;
+    windDirectionText.innerHTML = `${getWindDirection(data.wind.deg)} (${data.wind.deg}°)`;
 
     document.getElementById("visibility").textContent = (data.visibility / 1000) + " km";
     document.getElementById("pressure").textContent = data.main.pressure + " hPa";

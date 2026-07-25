@@ -375,14 +375,36 @@ canvas{
     transform:translate(-50%,-50%);
 }
 
-.arrow{
+.needle{
     position:absolute;
     left:50%;
-    top:18px;
-    transform-origin:50% 72px;
-    font-size:42px;
-    color:#00d4ff;
-    transition:.4s ease;
+    top:50%;
+    width:0;
+    height:0;
+    transform:translate(-50%,-50%) rotate(0deg);
+    transform-origin:center center;
+    transition:transform .4s ease;
+}
+
+.needle-head{
+    position:absolute;
+    left:-8px;
+    bottom:0;
+    width:0;
+    height:0;
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+    border-bottom:55px solid #00d4ff;
+}
+
+.needle-tail{
+    position:absolute;
+    left:-2px;
+    top:0;
+    width:4px;
+    height:45px;
+    background:white;
+    border-radius:10px;
 }
 
 #windDirectionText{
