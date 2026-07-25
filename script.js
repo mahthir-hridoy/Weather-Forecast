@@ -60,6 +60,8 @@ document.addEventListener("click",(e)=>{
     }
 });
 
+
+
 async function getWeather(city){
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     const response = await fetch(url);
@@ -89,6 +91,12 @@ async function getWeather(city){
     description.innerHTML = data.weather[0].description;
     humidity.innerHTML = data.main.humidity + "%";
     wind.innerHTML = data.wind.speed + " km/h";
+
+    const windArrow = document.getElementById("windArrow");
+    const windDirectionText = document.getElementById("windDirectionText");
+    windArrow.style.transform = `translateX(-50%) rotate(${data.wind.deg}deg)`;
+    windDirectionText.innerHTML = data.wind.deg + "°";
+
     document.getElementById("visibility").textContent = (data.visibility / 1000) + " km";
     document.getElementById("pressure").textContent = data.main.pressure + " hPa";
     console.log(data);
